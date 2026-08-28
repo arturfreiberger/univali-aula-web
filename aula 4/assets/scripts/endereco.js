@@ -1,8 +1,11 @@
 function salvarEndereco() {
-    sessionStorage.setItem('rua', document.getElementById('rua').value);
-    sessionStorage.setItem('cidade', document.getElementById('cidade').value);
-    sessionStorage.setItem('estado', document.getElementById('estado').value);
-    sessionStorage.setItem('cep', document.getElementById('cep').value);
+    let endereco = {
+        rua: document.getElementById('rua').value,
+        cidade: document.getElementById('cidade').value,
+        estado: document.getElementById('estado').value,
+        cep: document.getElementById('cep').value
+    };
+    sessionStorage.setItem('endereco', JSON.stringify(endereco));
 }
 
 const carregarEndereco = function () {
