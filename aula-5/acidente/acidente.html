@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncia de Acidente</title>
+    <link rel="stylesheet" href="./assets/styles/global.css">
+</head>
+<body>
+    <h2 class="titulo-acidente">Acidente de Trânsito sem Vítima</h2>
+
+    <main class="registro-acidente">
+        <!-- MENU LATERAL -->
+        <aside class="etapas-registro">
+            <div class="cabecalho-etapas">
+                Etapas do Registro
+            </div>
+            <div class="etapa ativa">
+                <span class="numero">1</span>
+                <span>Data e Hora do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">2</span>
+                <span>Local do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">3</span>
+                <span>Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">4</span>
+                <span>Veículos Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">5</span>
+                <span>Relato do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">6</span>
+                <span>Confirmação</span>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO DA ETAPA -->
+        <section class="conteudo-etapa">
+            <div class="card-formulario">
+                <h3>Insira a data e a hora do fato</h3>
+                <form id="form-data-hora">
+        
+                    <!-- DATA -->
+                    <div class="grupo-campo">
+                        <label for="data-fato">
+                            Data do Fato <span class="obrigatorio">*</span>
+                        </label>
+                        <div class="linha-data">
+                            <input
+                                type="date"
+                                id="data-fato"
+                                name="dataFato"
+                                required
+                            >
+                            <label class="checkbox-inline">
+                                <input
+                                    type="checkbox"
+                                    id="data-aproximada"
+                                >
+                                Data aproximada
+                            </label>
+                        </div>
+                    </div>
+        
+                    <!-- HORA -->
+                    <div class="grupo-campo">
+                        <label>
+                            Hora do Fato <span class="obrigatorio">*</span>
+                        </label>
+                        <div class="linha-hora">
+                            <div class="campos-hora">
+                                <input
+                                    type="number"
+                                    id="hora-fato"
+                                    placeholder="HH"
+                                    min="0"
+                                    max="23"
+                                    required
+                                >
+                                <span>:</span>
+                                <input
+                                    type="number"
+                                    id="minuto-fato"
+                                    placeholder="MM"
+                                    min="0"
+                                    max="59"
+                                    required
+                                >
+                            </div>   
+                            <label class="checkbox-inline">
+                                <input
+                                    type="checkbox"
+                                    id="hora-aproximada"
+                                >
+                                Hora aproximada
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="navegacao-etapas">
+                <a href="denuncia.html" class="botao-etapa">
+                    ◀ Etapa anterior
+                </a>
+                <button
+                    type="submit"
+                    form="form-data-hora"
+                    class="botao-etapa"
+                >
+                    Próxima etapa ▶
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="./assets/scripts/denuncia.js"></script>
+</body>
+</html>

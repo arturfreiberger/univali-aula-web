@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncia de Acidente</title>
+    <link rel="stylesheet" href="./assets/styles/global.css">
+</head>
+<body>
+    <h2 class="titulo-acidente">Acidente de Trânsito sem Vítima</h2>
+
+    <main class="registro-acidente">
+
+        <aside class="etapas-registro">
+            <div class="cabecalho-etapas">
+                Etapas do Registro
+            </div>
+            <div class="etapa">
+                <span class="numero">1</span>
+                <span>Data e Hora do Fato</span>
+            </div>
+            <div class="etapa ativa">
+                <span class="numero">2</span>
+                <span>Local do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">3</span>
+                <span>Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">4</span>
+                <span>Veículos Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">5</span>
+                <span>Relato do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">6</span>
+                <span>Confirmação</span>
+            </div>
+        </aside>
+
+        <section class="conteudo-etapa">
+            <div class="card-formulario">
+                <h3>Endereço do Fato</h3>
+                <form id="form-local">
+                    <div class="grid-endereco">
+                        <div class="grupo-campo">
+                            <label for="logradouro">
+                                Logradouro <span class="obrigatorio">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="logradouro"
+                                name="logradouro"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="numero">
+                                Número <span class="obrigatorio">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="numero"
+                                name="numero"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="bairro">
+                                Bairro <span class="obrigatorio">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="bairro"
+                                name="bairro"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="cidade">
+                                Cidade <span class="obrigatorio">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="cidade"
+                                name="cidade"
+                                required
+                            >
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="navegacao-etapas">
+                <a href="acidente.html" class="botao-etapa">
+                    ◀ Etapa anterior
+                </a>
+                <button
+                    type="submit"
+                    form="form-local"
+                    class="botao-etapa"
+                >
+                    Próxima etapa ▶
+                </button>
+            </div>
+        </section>
+    <script type="text/javascript" src="./assets/scripts/denuncia.js"></script>
+</body>
+</html>

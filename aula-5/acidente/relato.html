@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncia de Acidente</title>
+    <link rel="stylesheet" href="./assets/styles/global.css">
+</head>
+<body>
+    <h2 class="titulo-acidente">Acidente de Trânsito sem Vítima</h2>
+
+    <main class="registro-acidente">
+        <aside class="etapas-registro">
+            <div class="cabecalho-etapas">
+                Etapas do Registro
+            </div>
+            <div class="etapa">
+                <span class="numero">1</span>
+                <span>Data e Hora do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">2</span>
+                <span>Local do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">3</span>
+                <span>Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">4</span>
+                <span>Veículos Envolvidos</span>
+            </div>
+            <div class="etapa ativa">
+                <span class="numero">5</span>
+                <span>Relato do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">6</span>
+                <span>Confirmação</span>
+            </div>
+        </aside>
+
+        <section class="conteudo-etapa">
+            <div class="card-formulario">
+                <h3>Relato do Fato</h3>
+
+                <form id="form-relato">
+                    <div class="grupo-campo">
+                        <label for="relato-fato">
+                            Descreva como o acidente ocorreu
+                            <span class="obrigatorio">*</span>
+                        </label>
+
+                        <textarea
+                            id="relato-fato"
+                            name="relatoFato"
+                            maxlength="2000"
+                            required
+                        ></textarea>
+
+                        <div class="contador-relato">
+                            <span id="contador-caracteres">0</span>/2000 caracteres
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="navegacao-etapas">
+                <a href="veiculos.html" class="botao-etapa">
+                    ◀ Etapa anterior
+                </a>
+                <button
+                    type="submit"
+                    form="form-relato"
+                    class="botao-etapa"
+                >
+                    Próxima etapa ▶
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="./assets/scripts/denuncia.js"></script>
+</body>
+</html>

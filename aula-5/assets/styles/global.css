@@ -1,0 +1,790 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 0;
+}
+
+header {
+    background-color: #343a40;
+    padding: 5px;
+}
+
+footer {
+    background-color: #343a40;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container {
+    width: 60%;
+    margin-left:  auto;
+    margin-bottom: 30px;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 16.25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px; /* Em vez de margin-bottom */
+    border: 1px solid #00000020;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+
+h1,
+h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    min-width: 40%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+
+    box-sizing: border-box;
+}
+
+input[type="number"]{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 8%;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0970e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.botao:hover {
+    background-color: #043070;
+}
+
+.navbar {
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 6.5px;
+    padding-bottom: 19.5px;
+}
+
+.headfoot {
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.titulo {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.text-black-50 {
+    color: #00000080;
+}
+
+ul {
+    padding-inline-start: 26.25px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.confirm {
+    margin-top: 39px;
+}
+
+/* =========================================================
+   TELA DE DENUNCIAS
+   ========================================================= */
+
+.lista-denuncias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcao-denuncia {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.opcao-denuncia:hover {
+    background-color: #e5e5e5;
+}
+
+.icone-denuncia {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    background-color: #999;
+    color: white;
+    border-radius: 4px;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.texto-denuncia {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-denuncia strong {
+    color: #444;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.texto-denuncia span {
+    color: #999;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* =========================================================
+   TELA DE ACIDENTE
+   ========================================================= */
+
+.titulo-acidente {
+    color: #222;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+.registro-acidente {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   MENU DE ETAPAS
+   ========================================================= */
+
+.etapas-registro {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+
+.cabecalho-etapas {
+    padding: 10px;
+    color: #777;
+    font-size: 13px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.etapa {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #bbb;
+    font-size: 12px;
+}
+
+
+.etapa:last-child {
+    border-bottom: none;
+}
+
+
+/* Círculo com o número */
+
+.etapa .numero {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #eee;
+    color: #aaa;
+    font-size: 11px;
+}
+
+
+/* Etapa selecionada */
+
+.etapa.ativa {
+    color: #444;
+    font-weight: bold;
+    background-color: #fafafa;
+}
+
+
+.etapa.ativa .numero {
+    background-color: #37474f;
+    color: white;
+}
+
+
+/* =========================================================
+   CONTEÚDO À DIREITA
+   ========================================================= */
+
+.conteudo-acidente {
+    flex: 1;
+    min-height: 300px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+
+.titulo-etapa {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+.obrigatorio {
+    color: #d9534f;
+}
+
+
+/* =========================================================
+   FATO SELECIONADO
+   ========================================================= */
+
+.fato {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+
+.fato.selecionado {
+    background-color: #e8e8e8;
+    border-color: #bbb;
+}
+
+
+.icone-fato {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+    background-color: #888;
+    color: white;
+    border-radius: 4px;
+    font-size: 22px;
+}
+
+
+.descricao-fato {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.descricao-fato strong {
+    margin-bottom: 4px;
+    color: #444;
+    font-size: 12px;
+}
+
+
+.descricao-fato span {
+    color: #999;
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .registro-acidente {
+        flex-direction: column;
+    }
+
+    .etapas-registro {
+        width: 100%;
+    }
+
+    .conteudo-acidente {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .grid-endereco {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-envolvido {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-envolvido .grupo-campo:last-child {
+        grid-column: auto;
+    }
+
+    .grid-veiculo {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+.conteudo-etapa {
+    flex: 1;
+}
+
+/* Caixa branca principal */
+
+.card-formulario {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 15px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card-formulario h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Campos */
+
+.grupo-campo {
+    margin-bottom: 15px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 11px;
+    color: #555;
+}
+
+.obrigatorio {
+    color: #d9534f;
+}
+
+/* Linha da data */
+
+.linha-data {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.linha-data input[type="date"] {
+    flex: 1;
+    height: 32px;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+/* Linha da hora */
+
+.linha-hora {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.campos-hora {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 8px;
+}
+
+.campos-hora input[type="number"] {
+    flex: 1;
+    width: auto;
+    height: 32px;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.campos-hora span {
+    color: #888;
+}
+
+/* Checkbox */
+
+.checkbox-inline {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
+    min-width: 125px;
+    margin: 0 !important;
+    white-space: nowrap;
+    font-size: 11px !important;
+}
+
+.checkbox-inline input {
+    margin: 0;
+}
+
+/* Navegação inferior */
+
+.navegacao-etapas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.botao-etapa {
+    padding: 7px 10px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.botao-etapa:hover {
+    background-color: #202428;
+}
+
+.grid-endereco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 15px;
+}
+
+.grid-endereco .grupo-campo {
+    margin-bottom: 0;
+}
+
+.grid-endereco input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.grid-envolvido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.grid-envolvido .grupo-campo:last-child {
+    grid-column: 1 / 2;
+}
+
+.grid-envolvido input[type="text"],
+.grid-envolvido select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#lista-envolvidos {
+    margin-top: 15px;
+}
+
+.envolvido-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.dados-envolvido {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.dados-envolvido strong {
+    font-size: 12px;
+    color: #444;
+}
+
+.dados-envolvido span {
+    font-size: 11px;
+    color: #777;
+}
+
+.remover-envolvido {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 3px;
+    background-color: #b94a48;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.remover-envolvido:hover {
+    background-color: #923a38;
+}
+
+.grid-veiculo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.grid-veiculo .grupo-campo {
+    margin-bottom: 0;
+}
+
+.grid-veiculo input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#lista-veiculos {
+    margin-top: 15px;
+}
+
+.veiculo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.dados-veiculo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.dados-veiculo strong {
+    font-size: 12px;
+    color: #444;
+}
+
+.dados-veiculo span {
+    font-size: 11px;
+    color: #777;
+}
+
+.remover-veiculo {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 3px;
+    background-color: #b94a48;
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.remover-veiculo:hover {
+    background-color: #923a38;
+}
+
+#relato-fato {
+    width: 100%;
+    min-height: 180px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+#relato-fato:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.contador-relato {
+    margin-top: 5px;
+    text-align: right;
+    font-size: 10px;
+    color: #999;
+}
+
+.resumo-confirmacao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bloco-resumo {
+    padding: 12px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.bloco-resumo h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+    font-size: 13px;
+}
+
+.linha-resumo {
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.linha-resumo strong {
+    min-width: 100px;
+    color: #555;
+}
+
+.linha-resumo span {
+    color: #777;
+}
+
+.item-resumo {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.item-resumo:last-child {
+    margin-bottom: 0;
+}
+
+.item-resumo strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #444;
+}
+
+.item-resumo span {
+    display: block;
+    color: #777;
+}
+
+#confirmacao-relato {
+    margin: 0;
+    white-space: pre-wrap;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+}

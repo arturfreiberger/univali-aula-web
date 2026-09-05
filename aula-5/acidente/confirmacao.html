@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncia de Acidente</title>
+    <link rel="stylesheet" href="./assets/styles/global.css">
+</head>
+<body>
+    <h2 class="titulo-acidente">Acidente de Trânsito sem Vítima</h2>
+
+    <main class="registro-acidente">
+        <aside class="etapas-registro">
+            <div class="cabecalho-etapas">
+                Etapas do Registro
+            </div>
+            <div class="etapa">
+                <span class="numero">1</span>
+                <span>Data e Hora do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">2</span>
+                <span>Local do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">3</span>
+                <span>Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">4</span>
+                <span>Veículos Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">5</span>
+                <span>Relato do Fato</span>
+            </div>
+            <div class="etapa ativa">
+                <span class="numero">6</span>
+                <span>Confirmação</span>
+            </div>
+        </aside>
+
+        <section class="conteudo-etapa">
+            <div class="card-formulario">
+                <h3>Revise os dados antes de finalizar</h3>
+
+                <div class="resumo-confirmacao">
+                    <section class="bloco-resumo">
+                        <h4>Data e Hora do Fato</h4>
+
+                        <div class="linha-resumo">
+                            <strong>Data:</strong>
+                            <span id="confirmacao-data"></span>
+                        </div>
+
+                        <div class="linha-resumo">
+                            <strong>Hora:</strong>
+                            <span id="confirmacao-hora"></span>
+                        </div>
+
+                    </section>
+
+                    <section class="bloco-resumo">
+                        <h4>Local do Fato</h4>
+
+                        <div class="linha-resumo">
+                            <strong>Logradouro:</strong>
+                            <span id="confirmacao-logradouro"></span>
+                        </div>
+
+                        <div class="linha-resumo">
+                            <strong>Número:</strong>
+                            <span id="confirmacao-numero"></span>
+                        </div>
+
+                        <div class="linha-resumo">
+                            <strong>Bairro:</strong>
+                            <span id="confirmacao-bairro"></span>
+                        </div>
+
+                        <div class="linha-resumo">
+                            <strong>Cidade:</strong>
+                            <span id="confirmacao-cidade"></span>
+                        </div>
+                    </section>
+
+                    <section class="bloco-resumo">
+
+                        <h4>Envolvidos</h4>
+
+                        <div id="confirmacao-envolvidos"></div>
+
+                    </section>
+
+                    <section class="bloco-resumo">
+
+                        <h4>Veículos Envolvidos</h4>
+
+                        <div id="confirmacao-veiculos"></div>
+
+                    </section>
+
+                    <section class="bloco-resumo">
+
+                        <h4>Relato do Fato</h4>
+
+                        <p id="confirmacao-relato"></p>
+
+                    </section>
+                </div>
+            </div>
+
+            <div class="navegacao-etapas">
+                <a href="relato.html" class="botao-etapa">
+                    ◀ Etapa anterior
+                </a>
+                <button
+                    type="button"
+                    id="finalizar-denuncia"
+                    class="botao-etapa"
+                >
+                    Finalizar denúncia
+                </button>
+            </div>
+        </section>
+    </main>
+
+
+    <script type="text/javascript" src="./assets/scripts/denuncia.js"></script>
+</body>
+</html>

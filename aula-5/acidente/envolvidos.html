@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncia de Acidente</title>
+    <link rel="stylesheet" href="./assets/styles/global.css">
+</head>
+<body>
+    <h2 class="titulo-acidente">Acidente de Trânsito sem Vítima</h2>
+
+    <main class="registro-acidente">
+
+        <aside class="etapas-registro">
+            <div class="cabecalho-etapas">
+                Etapas do Registro
+            </div>
+            <div class="etapa">
+                <span class="numero">1</span>
+                <span>Data e Hora do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">2</span>
+                <span>Local do Fato</span>
+            </div>
+            <div class="etapa ativa">
+                <span class="numero">3</span>
+                <span>Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">4</span>
+                <span>Veículos Envolvidos</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">5</span>
+                <span>Relato do Fato</span>
+            </div>
+            <div class="etapa">
+                <span class="numero">6</span>
+                <span>Confirmação</span>
+            </div>
+        </aside>
+
+        <section class="conteudo-etapa">
+            <div class="card-formulario">
+                <h3>Envolvidos no acidente</h3>
+                <form id="form-envolvido">
+                    <div class="grid-envolvido">
+                        <div class="grupo-campo">
+                            <label for="nome-envolvido">
+                                Nome <span class="obrigatorio">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome-envolvido"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="tipo-envolvido">
+                                Tipo de envolvimento
+                                <span class="obrigatorio">*</span>
+                            </label>
+                            <select id="tipo-envolvido" required>
+                                <option value="">Selecione</option>
+                                <option value="condutor">Condutor</option>
+                                <option value="passageiro">Passageiro</option>
+                                <option value="pedestre">Pedestre</option>
+                                <option value="proprietario">Proprietário do veículo</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="cpf-envolvido">
+                                CPF
+                            </label>
+                            <input
+                                type="text"
+                                id="cpf-envolvido"
+                                maxlength="14"
+                            >
+                        </div>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="botao-secundario"
+                    >
+                        Adicionar envolvido
+                    </button>
+                </form>
+
+                <div id="lista-envolvidos"></div>
+            </div>
+
+            <div class="navegacao-etapas">
+                <a href="local.html" class="botao-etapa">
+                    ◀ Etapa anterior
+                </a>
+                <button
+                    type="button"
+                    id="proxima-etapa-envolvidos"
+                    class="botao-etapa"
+                >
+                    Próxima etapa ▶
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="./assets/scripts/denuncia.js"></script>
+</body>
+</html>
