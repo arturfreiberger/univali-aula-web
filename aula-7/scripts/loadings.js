@@ -26,6 +26,19 @@ const loadMinicards = () => {
         });
 }
 
+const loadBigcards = () => {
+    fetch('./bigcards.html')
+        .then(response => response.text())
+        .then(data => {
+            let allBigcards = '';
+            for(let i = 0; i < 6; i++) {
+                allBigcards += data;
+            }
+            document.getElementById('bigcards-mainpage').innerHTML = allBigcards
+        });
+}
+
 document.addEventListener('DOMContentLoaded', loadNavbar);
 document.addEventListener('DOMContentLoaded', loadCarousel);
 document.addEventListener('DOMContentLoaded', loadMinicards);
+document.addEventListener('DOMContentLoaded', loadBigcards);
